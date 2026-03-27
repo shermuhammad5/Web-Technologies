@@ -1,0 +1,221 @@
+/* RESET */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #87ceeb; /* sky blue background */
+  color: #2b2d42;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #1e90ff;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  color: #555;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #e04343;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  gap: 25px;
+  padding: 12px 40px;
+  background: #f0f8ff; /* lighter sky tone */
+  border-bottom: 1px solid #d0e1ff;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #1e90ff;
+  background: #d0e1ff;
+}
+
+.navbar .active {
+  color: #1e90ff;
+  font-weight: 600;
+  border-bottom: 2px solid #1e90ff;
+}
+
+/* MAIN CONTAINER */
+.container {
+  display: flex;
+  gap: 25px;
+  padding: 30px 40px;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  justify-content: space-around; /* cards spread horizontally */
+  align-items: flex-start;
+}
+
+/* CARD */
+.card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #d0e1ff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #1e90ff;
+}
+
+/* TICKETS */
+.ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f8ff;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #d0e1ff;
+  transition: all 0.2s;
+}
+
+.ticket:hover {
+  background: #d0e1ff;
+}
+
+/* FORM ELEMENTS */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #a0c4ff;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 5px rgba(30,144,255,0.3);
+}
+
+/* BUTTONS */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* PRIMARY BUTTON */
+.primary {
+  background: #1e90ff;
+  color: white;
+}
+
+.primary:hover {
+  background: #187bcd;
+  transform: translateY(-2px);
+}
+
+/* DELETE BUTTON */
+.delete {
+  background: #ff4c4c;
+  color: white;
+}
+
+.delete:hover {
+  background: #e04343;
+  transform: translateY(-2px);
+}
+
+/* CLEAR BUTTON */
+.clear-btn {
+  background: #a0a0a0;
+  color: white;
+}
+
+.clear-btn:hover {
+  background: #888;
+}
+
+/* BUTTON GROUP */
+.btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* ERROR MESSAGE */
+.error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .header,
+  .navbar {
+    padding: 15px 20px;
+  }
+}

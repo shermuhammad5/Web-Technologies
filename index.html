@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniHelpDesk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">
+    <div class="logo-placeholder">Logo</div>
+    <div class="logo-text">
+      <h2>MiniHelpDesk</h2>
+      <p>Support Dashboard</p>
+    </div>
+  </div>
+  <button class="logout-btn">Logout</button>
+</header>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="#" class="active">Dashboard</a>
+  <a href="#">Tickets</a>
+  <a href="#">New Ticket</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+  <!-- Ticket List Card -->
+  <div class="card" id="ticketListCard">
+    <h3>Tickets</h3>
+    <div id="ticketList">
+      <div class="ticket">
+        <span>Ticket 1: Login issue</span>
+        <button class="delete btn">Delete</button>
+      </div>
+      <div class="ticket">
+        <span>Ticket 2: Page not loading</span>
+        <button class="delete btn">Delete</button>
+      </div>
+      <div class="ticket">
+        <span>Ticket 3: Password reset</span>
+        <button class="delete btn">Delete</button>
+      </div>
+      <div class="ticket">
+        <span>Ticket 4: Error 404</span>
+        <button class="delete btn">Delete</button>
+      </div>
+      <div class="ticket">
+        <span>Ticket 5: Slow performance</span>
+        <button class="delete btn">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Ticket Form Card -->
+  <div class="card" id="createTicketCard">
+    <h3>Create Ticket</h3>
+    <div class="error" id="errorMsg"></div>
+    <form id="ticketForm">
+      <label for="title">Subject:</label>
+      <input type="text" id="title" name="title" placeholder="Enter ticket subject">
+      
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" placeholder="Enter description"></textarea>
+      
+      <label for="priority">Priority:</label>
+      <select id="priority" name="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      
+      <div class="btn-group">
+        <button type="submit" class="primary btn">Create</button>
+        <button type="reset" class="clear-btn btn">Clear</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
